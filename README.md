@@ -1,6 +1,5 @@
 # [Greptile](https://www.greptile.com/) + Github Repo Search Map
 
-Try it out here: repo-keyword-search.vercel.app
 
 ## Getting Started
 
@@ -16,11 +15,9 @@ Try it out here: repo-keyword-search.vercel.app
    ```
 
 3. Set up environment variables:
-   - Copy the `.env.example` file to create a new `.env` file:
      ```bash
      cp .env.example .env
      ```
-   - Open the `.env` file and fill in the required values:
      ```
      GREPTILE_API_TOKEN=your_greptile_api_token_here
      GITHUB_API_KEY=your_github_api_key_here
