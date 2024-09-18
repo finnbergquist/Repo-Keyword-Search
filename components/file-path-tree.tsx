@@ -1,3 +1,10 @@
+/**
+ * @file file-path-tree.tsx
+ * @description This component renders a tree-like structure of file paths based on search results.
+ * It provides an interactive visualization of the file structure with expandable nodes and
+ * detailed information for each file in a dialog.
+ */
+
 import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
@@ -20,6 +27,11 @@ interface TreeNode {
   result?: SearchResult;
 }
 
+/**
+ * FilePathTree component
+ * @param {Object} props - Component props
+ * @param {SearchResult[]} props.results - Array of search results to display in the tree
+ */
 const FilePathTree: React.FC<{ results: SearchResult[] }> = ({ results }) => {
   const buildTree = (results: SearchResult[]): TreeNode => {
     const root: TreeNode = { name: 'root', children: [] };
@@ -41,6 +53,11 @@ const FilePathTree: React.FC<{ results: SearchResult[] }> = ({ results }) => {
     return root;
   };
 
+  /**
+   * Renders a single node of the file tree
+   * @param {TreeNode} node - The node to render
+   * @param {number} depth - The depth of the node in the tree (for indentation)
+   */
   const renderNode = (node: TreeNode, depth: number = 0) => {
     const isEdgeNode = node.children.length === 0;
 
