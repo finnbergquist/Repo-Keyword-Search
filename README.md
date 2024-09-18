@@ -1,4 +1,6 @@
-Greptile + Github Repo Search Map
+# [Greptile](https://www.greptile.com/) + Github Repo Search Map
+
+Try it out here: repo-keyword-search.vercel.app
 
 ## Getting Started
 
